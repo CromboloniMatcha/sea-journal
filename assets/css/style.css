@@ -1,0 +1,68 @@
+/* ===== Theme (change colours here only) ===== */
+:root {
+  --bg: #faf7f2;
+  --text: #2b2b2b;
+  --muted: #6b6b6b;
+  --accent: #2f6f6a;
+  --accent-dark: #255955;
+  --card: #ffffff;
+  --line: #e7e1d6;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
+
+/* ===== Navbar ===== */
+.site-nav { background: var(--card); border-bottom: 1px solid var(--line); }
+.site-nav .navbar-brand { color: var(--accent); font-weight: 600; }
+.site-nav .nav-link { color: var(--text); }
+.site-nav .nav-link.active, .site-nav .nav-link:hover { color: var(--accent); font-weight: 600; }
+
+/* ===== Cover ===== */
+.cover {
+  background: #cfdcd9 url("../img/cover.png") center / cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+}
+.cover-overlay {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(20, 30, 30, 0.45);
+  color: #fff;
+  padding: 4rem 0;
+}
+.cover-kicker { letter-spacing: .15em; text-transform: uppercase; font-size: .85rem; margin-bottom: .5rem; }
+.cover-title { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 600; }
+.cover-sub { font-size: 1.15rem; margin-bottom: .2rem; }
+.cover-dates { opacity: .9; }
+
+.btn-accent { background: var(--accent); color: #fff; border: 0; }
+.btn-accent:hover { background: var(--accent-dark); color: #fff; }
+
+/* ===== Week cards ===== */
+.weeks { padding: 3rem 0; max-width: 960px; }
+.section-title { text-align: center; font-size: 1.8rem; }
+.week-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  height: 100%;
+  transition: transform .15s, border-color .15s;
+}
+.week-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.week-num { display: block; font-family: "Lora", serif; font-size: 1.4rem; color: var(--accent); font-weight: 600; }
+.week-desc { color: var(--muted); font-size: .95rem; }
+
+/* ===== Footer ===== */
+.site-footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line); }
