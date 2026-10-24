@@ -46,23 +46,31 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .btn-accent { background: var(--accent); color: #fff; border: 0; }
 .btn-accent:hover { background: var(--accent-dark); color: #fff; }
 
-/* ===== Week cards ===== */
-.weeks { padding: 3rem 0; max-width: 960px; }
-.section-title { text-align: center; font-size: 1.8rem; }
-.week-card {
-  display: block;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: var(--text);
-  height: 100%;
-  transition: transform .15s, border-color .15s;
+/* ===== Dropdown ===== */
+.dropdown-menu { background: var(--card); border-color: var(--line); }
+.dropdown-item:hover { background: var(--bg); color: var(--accent); }
+
+/* ===== Photo placeholders (label shows until the image file exists) ===== */
+.photo { position: relative; overflow: hidden; border-radius: 12px; background: #e4ded2; }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--muted); font-size: .9rem; }
+.ph-tall, .ph-card { aspect-ratio: 4 / 5; }
+
+/* ===== Home sections ===== */
+.intro, .welcome, .cards { max-width: 960px; padding-top: 2.5rem; padding-bottom: 1rem; }
+.intro-title { font-size: 1.8rem; color: var(--accent); }
+.section-title { font-size: 1.6rem; }
+
+/* ===== Category cards ===== */
+.cat-card { position: relative; display: block; text-decoration: none; }
+.cat-card .photo { transition: transform .15s; }
+.cat-card:hover .photo { transform: translateY(-3px); }
+.cat-btn {
+  position: absolute; left: 50%; bottom: 1.2rem; transform: translateX(-50%);
+  background: var(--card); color: var(--accent); border: 1px solid var(--accent);
+  border-radius: 8px; padding: .5rem 1rem; font-weight: 600; font-size: .95rem; white-space: nowrap;
 }
-.week-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.week-num { display: block; font-family: "Lora", serif; font-size: 1.4rem; color: var(--accent); font-weight: 600; }
-.week-desc { color: var(--muted); font-size: .95rem; }
+.cat-card:hover .cat-btn { background: var(--accent); color: #fff; }
 
 /* ===== Footer ===== */
 .site-footer { padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line); }
