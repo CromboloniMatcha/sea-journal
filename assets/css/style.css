@@ -114,3 +114,20 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
   .bento { grid-template-columns: 1fr; }
   .b-wide, .b-tall, .b-full { grid-column: auto; grid-row: auto; }
 }
+
+
+/* ===== Category pages ===== */
+.page-hero { background: linear-gradient(135deg, #3a1d22, #121212); padding: 4rem 7% 3rem; }
+.page-hero-inner { max-width: 900px; }
+.page-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-size: clamp(2.2rem, 6vw, 4rem); color: var(--cream); margin: .4rem 0 1rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+.chip { border: 1px solid var(--accent-soft); color: var(--accent-soft); border-radius: 999px; padding: .3rem 1rem; font-size: .85rem; text-decoration: none; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.page-main { max-width: 900px; margin: 0 auto; padding: 2.5rem 7% 3rem; }
+.sub, .video-wrap { margin-bottom: 3rem; scroll-margin-top: 1rem; }
+.sub-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: 1.7rem; color: var(--cream); margin-bottom: .8rem; }
+.ph-wide { aspect-ratio: 4 / 3; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cat-pager { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.cat-pager a { color: var(--accent-soft); text-decoration: none; font-weight: 600; }
