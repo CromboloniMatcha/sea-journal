@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,8 +7,9 @@
   <meta name="description" content="A weekly journal of my SEA Teacher programme experience.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -23,6 +24,8 @@
             <li><a class="dropdown-item" href="experiences.html">SEA Teacher Experiences</a></li>
             <li><a class="dropdown-item" href="semarang.html">Discover Semarang</a></li>
             <li><a class="dropdown-item" href="reflection.html">Reflection</a></li>
+            <li><a class="dropdown-item" href="category4.html">Category Four</a></li>
+            <li><a class="dropdown-item" href="category5.html">Category Five</a></li>
           </ul>
         </li>
       </ul>
@@ -30,65 +33,89 @@
   </nav>
 
   <header class="cover">
-    <div class="cover-overlay">
-      <div class="container text-center">
-        <p class="cover-kicker">SEA-Teacher Project 2026 Batch 12</p>
-        <h1 class="cover-title">Passion Meets Purpose</h1>
-        <p class="cover-sub">Allyza Mae Agustin · MMSU x UPGRIS · YSKI, Indonesia</p>
-        <p class="cover-dates">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+    <div class="cover-top cover-pad">
+      <img src="assets/img/sea-logo.png" alt="SEA Teacher" onerror="this.style.display='none'">
+      <img src="assets/img/partner-logos.png" alt="Partner universities" onerror="this.style.display='none'">
+    </div>
+    <img class="cover-person" src="assets/img/hero-person.png" alt="Allyza Mae Agustin" onerror="this.style.display='none'">
+    <div class="cover-body cover-pad">
+      <h1 class="cover-title">
+        <span class="t1">Passion</span>
+        <span class="t2">Meets</span>
+        <span class="t2">Purpose</span>
+      </h1>
+      <p class="cover-dates">What began as a student exchange opportunity became a journey of growth, self-discovery, and meaningful connections. Discover the experiences and lessons that made my chapter in Indonesia truly special.</p>
     </div>
   </header>
 
   <main>
-    <section class="container intro">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4">
+    <section class="intro">
+      <div class="intro-inner">
+        <div class="intro-photo reveal from-left">
           <div class="photo ph-tall">
             <span class="ph-label">Filipinos at UPGRIS</span>
-            <img src="assets/img/filipinos.jpg" alt="Filipinos at UPGRIS" onerror="this.style.display='none'">
+            <img src="assets/img/filipinos.png" alt="Allyza at Universitas PGRI Semarang" onerror="this.style.display='none'">
           </div>
         </div>
-        <div class="col-md-8">
-          <h2 class="intro-title">Mabuhay! I am Allyza.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="intro-text reveal from-right">
+          <h2 class="intro-title">Mabuhay!</h2>
+          <p>I am Allyza Mae F. Agustin from Mariano Marcos State University, Philippines. As a SEA-Teacher participant at Universitas PGRI Semarang, I experienced a different culture, education system, and way of life that helped me grow both as a future teacher and as a person—an experience I will cherish forever.</p>
         </div>
       </div>
     </section>
 
-    <section class="container welcome text-center">
-      <h2 class="section-title">Welcome to the chapter where passion met purpose.</h2>
-      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-    </section>
+    <section class="welcome">
+      <div class="welcome-inner">
+        <div class="welcome-head reveal">
+          <h2 class="section-title">Welcome to the chapter where passion met purpose.</h2>
+          <p>Explore this site to see my story unfold. I'm excited to share this journey with you!</p>
+        </div>
 
-    <section class="container cards">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <a href="experiences.html" class="cat-card">
-            <div class="photo ph-card">
-              <span class="ph-label">Picture</span>
-              <img src="assets/img/card-experiences.jpg" alt="SEA Teacher Experiences" onerror="this.style.display='none'">
+        <div class="bento">
+          <a href="experiences.html" class="b-card b-wide reveal">
+            <img class="b-img" src="assets/img/card-experiences.png" alt="" onerror="this.style.display='none'">
+            <div class="b-body">
+              <span class="b-tag">Category · 01</span>
+              <h3 class="b-title">SEA Teacher Experiences</h3>
+              <p class="b-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <span class="b-btn"><span class="b-pill">Read more</span><span class="b-circle"><i class="bi bi-chevron-double-right"></i></span></span>
             </div>
-            <span class="cat-btn">SEA Teacher Experiences</span>
           </a>
-        </div>
-        <div class="col-md-4">
-          <a href="semarang.html" class="cat-card">
-            <div class="photo ph-card">
-              <span class="ph-label">Picture</span>
-              <img src="assets/img/card-semarang.jpg" alt="Discover Semarang" onerror="this.style.display='none'">
+          <a href="semarang.html" class="b-card b-tall reveal d1">
+            <img class="b-img" src="assets/img/card-semarang.png" alt="" onerror="this.style.display='none'">
+            <div class="b-body">
+              <span class="b-tag">Category · 02</span>
+              <h3 class="b-title">Discover Semarang</h3>
+              <p class="b-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span class="b-btn"><span class="b-pill">Read more</span><span class="b-circle"><i class="bi bi-chevron-double-right"></i></span></span>
             </div>
-            <span class="cat-btn">Discover Semarang</span>
           </a>
-        </div>
-        <div class="col-md-4">
-          <a href="reflection.html" class="cat-card">
-            <div class="photo ph-card">
-              <span class="ph-label">Picture</span>
-              <img src="assets/img/card-reflection.jpg" alt="Reflection" onerror="this.style.display='none'">
+          <a href="reflection.html" class="b-card reveal d2">
+            <img class="b-img" src="assets/img/card-reflection.png" alt="" onerror="this.style.display='none'">
+            <div class="b-body">
+              <span class="b-tag">Category · 03</span>
+              <h3 class="b-title">Reflection</h3>
+              <p class="b-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <span class="b-btn"><span class="b-pill">Read more</span><span class="b-circle"><i class="bi bi-chevron-double-right"></i></span></span>
             </div>
-            <span class="cat-btn">Reflection</span>
+          </a>
+          <a href="category4.html" class="b-card reveal d1">
+            <img class="b-img" src="assets/img/card-category4.png" alt="" onerror="this.style.display='none'">
+            <div class="b-body">
+              <span class="b-tag">Category · 04</span>
+              <h3 class="b-title">Category Four</h3>
+              <p class="b-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span class="b-btn"><span class="b-pill">Read more</span><span class="b-circle"><i class="bi bi-chevron-double-right"></i></span></span>
+            </div>
+          </a>
+          <a href="category5.html" class="b-card b-full reveal">
+            <img class="b-img" src="assets/img/card-category5.png" alt="" onerror="this.style.display='none'">
+            <div class="b-body">
+              <span class="b-tag">Category · 05</span>
+              <h3 class="b-title">Category Five</h3>
+              <p class="b-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span class="b-btn"><span class="b-pill">Read more</span><span class="b-circle"><i class="bi bi-chevron-double-right"></i></span></span>
+            </div>
           </a>
         </div>
       </div>
@@ -100,6 +127,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
