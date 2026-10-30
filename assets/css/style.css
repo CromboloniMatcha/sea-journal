@@ -1,14 +1,14 @@
 /* ===== Theme (change colours here only) ===== */
 :root {
-  --bg: #121212;
-  --text: #ece5da;
-  --cream: #fff3dc;
-  --muted: #a8a29a;
-  --accent: #a82a3b;
-  --accent-dark: #8a2030;
-  --accent-soft: #e9776c;
-  --card: #1b1b1b;
-  --line: #2c2c2c;
+  --bg: #0a0a0a;
+  --text: #e9e4d6;
+  --cream: #fff4cf;
+  --muted: #a39b84;
+  --accent: #d4a62a;
+  --accent-dark: #b8901f;
+  --accent-soft: #f0c75e;
+  --card: #141414;
+  --line: #2e2813;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 
 /* ===== Navbar ===== */
-.site-nav { background: var(--card); border-bottom: 1px solid var(--line); }
+.site-nav { background: var(--card); border-bottom: 1px solid rgba(212,166,42,.4); }
 .site-nav .navbar-brand { color: var(--cream); font-weight: 600; }
 .site-nav .nav-link { color: var(--text); }
 .site-nav .nav-link.active, .site-nav .nav-link:hover { color: var(--accent-soft); font-weight: 600; }
@@ -31,7 +31,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
   position: relative;
   width: 100%;
   aspect-ratio: 1366 / 768;          /* same ratio as cover.png, so nothing is cropped */
-  background: #121212 url("../img/cover.png") center / 100% 100% no-repeat;
+  background: #0a0a0a url("../img/cover.png") center / 100% 100% no-repeat;
 }
 .cover-body { position: absolute; left: 6%; bottom: 11%; width: 62%; }
 .cover-title { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; line-height: .92; color: var(--cream); margin: 0 0 1.2vw; }
@@ -39,8 +39,8 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .cover-title .t2 { display: block; font-size: 4.6vw; }
 .cover-dates { max-width: 62%; color: var(--text); font-size: clamp(.8rem, 1.25vw, 1.2rem); line-height: 1.6; margin: 0; }
 
-.btn-accent { background: var(--accent); color: #fff; border: 0; }
-.btn-accent:hover { background: var(--accent-dark); color: #fff; }
+.btn-accent { background: var(--accent); color: #111; border: 0; }
+.btn-accent:hover { background: var(--accent-dark); color: #111; }
 
 /* ===== Dropdown ===== */
 .dropdown-menu { background: var(--card); border-color: var(--line); }
@@ -53,7 +53,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .ph-tall, .ph-card { aspect-ratio: 4 / 5; }
 
 /* ===== Intro (Mabuhay) ===== */
-.intro { position: relative; z-index: 2; background: #121212; padding: 3rem 7%; }
+.intro { position: relative; z-index: 2; background: #0a0a0a; padding: 3rem 7%; }
 .intro-inner { display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 3rem; align-items: center; }
 .intro-photo { position: relative; z-index: 3; margin: -4.5rem 0; }
 .intro-photo .ph-tall { aspect-ratio: 3 / 4; }
@@ -76,7 +76,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .b-top { flex: 3 1 0; min-height: 0; }
 .b-bottom { flex: 2 1 0; min-height: 0; }
 .b-play { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(255,255,255,.9); pointer-events: none; }
-.b-card { position: relative; display: block; overflow: hidden; border-radius: 20px; color: #fff; text-decoration: none; background: linear-gradient(135deg, #3a2a2e, #1e1e22); }
+.b-card { position: relative; display: block; overflow: hidden; border-radius: 20px; color: #fff; text-decoration: none; background: linear-gradient(135deg, #2b2410, #1e1e22); }
 .b-card::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.15) 65%); }
 .b-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
 .b-card:hover .b-img { transform: scale(1.05); }
@@ -85,8 +85,8 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .b-title { font-family: "Inter", sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.15; margin: 0; }
 .b-text { font-size: .9rem; color: rgba(255,255,255,.85); margin: .4rem 0 1rem; max-width: 46ch; }
 .b-btn { display: inline-flex; align-items: center; gap: .5rem; }
-.b-pill { background: var(--accent); color: #fff; border-radius: 999px; padding: .4rem 1.3rem; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.b-circle { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: .75rem; transition: transform .2s; }
+.b-pill { background: var(--accent); color: #111; border-radius: 999px; padding: .4rem 1.3rem; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.b-circle { color: #111; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: .75rem; transition: transform .2s; }
 .b-card:hover .b-circle { transform: translateX(4px); }
 
 /* ===== Move-in animation ===== */
@@ -123,12 +123,12 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 
 
 /* ===== Category pages ===== */
-.page-hero { background: linear-gradient(135deg, #3a1d22, #121212); padding: 4rem 7% 3rem; }
+.page-hero { background: linear-gradient(135deg, #2b2208, #121212); padding: 4rem 7% 3rem; }
 .page-hero-inner { max-width: 900px; }
 .page-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-size: clamp(2.2rem, 6vw, 4rem); color: var(--cream); margin: .4rem 0 1rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
 .chip { border: 1px solid var(--accent-soft); color: var(--accent-soft); border-radius: 999px; padding: .3rem 1rem; font-size: .85rem; text-decoration: none; }
-.chip:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: #111; }
 .page-main { max-width: 900px; margin: 0 auto; padding: 2.5rem 7% 3rem; }
 .sub, .video-wrap { margin-bottom: 3rem; scroll-margin-top: 1rem; }
 .sub-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: 1.7rem; color: var(--cream); margin-bottom: .8rem; }
@@ -163,3 +163,11 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .w-third { width: 33.333%; }
 @media (max-width: 768px) { .w-third { width: 60%; } }
 .w-third { margin-left: auto; margin-right: auto; }
+
+
+/* ===== Section I: text wraps around the photo (like Word) + justified text ===== */
+.sub-flow { display: flow-root; }
+.wrap-photo { float: left; width: 34%; margin: 0 1.5rem .75rem 0; }
+.sub-title { margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid rgba(212,166,42,.35); }
+.page-main p, .page-main blockquote { text-align: justify; hyphens: auto; }
+@media (max-width: 576px) { .wrap-photo { float: none; width: 100%; margin: 0 0 1rem; } }
