@@ -137,3 +137,29 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .cat-pager { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 1.5rem; }
 .cat-pager a { color: var(--accent-soft); text-decoration: none; font-weight: 600; }
+
+
+/* ===== School page layout ===== */
+.ph-sq { aspect-ratio: 1 / 1; }
+.ph-port { aspect-ratio: 3 / 5; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: center; margin-bottom: 1.5rem; }
+.pair { display: grid; grid-template-columns: 1fr 1.6fr; gap: 1rem; align-items: end; margin-top: 1.5rem; }
+.note { border-left: 3px solid var(--accent-soft); padding-left: 1rem; margin: 1.5rem 0; color: var(--muted); font-style: italic; }
+@media (max-width: 768px) { .split, .pair { grid-template-columns: 1fr; } }
+
+
+/* ===== Photos shown in full (never cropped) ===== */
+.photo.fit { aspect-ratio: auto; background: transparent; }
+.photo.fit img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
+.photo.fit .ph-label { display: none; }
+.photo.fit.empty { background: #2a2a2a; }
+.photo.fit.empty .ph-label { display: flex; }
+.photo.fit.empty.ph-sq { aspect-ratio: 1 / 1; }
+.photo.fit.empty.ph-wide { aspect-ratio: 4 / 3; }
+.photo.fit.empty.ph-port { aspect-ratio: 3 / 5; }
+.photo.fit.round { border-radius: 24px; }
+.pair { grid-template-columns: 1fr 1fr; align-items: center; }
+
+.w-third { width: 33.333%; }
+@media (max-width: 768px) { .w-third { width: 60%; } }
+.w-third { margin-left: auto; margin-right: auto; }
