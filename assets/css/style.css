@@ -231,3 +231,72 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
   .ped-hero { grid-template-columns: 1fr; padding-top: 1rem; }
   .ped-intro { padding: 1.5rem; min-height: 0; }
 }
+
+
+/* ===== School page: cream blocks sit OFFSET behind the media (not centred) ===== */
+.row-i, .row-ii, .row-iii { background: none; }
+.row-i { align-items: start; }
+.row-ii { padding-top: 4rem; }
+.row-iii { align-items: start; padding-top: 5rem; }
+.has-block { position: relative; isolation: isolate; }
+.has-block::before { content: ""; position: absolute; z-index: -1; background: var(--tint); }
+/* I: block starts at the top of the video and runs below it */
+.blk-i { padding-bottom: 3.5rem; }
+.blk-i::before { top: 0; bottom: 0; left: -3rem; right: -7vw; }
+/* II: block starts above the photo, photo overhangs its bottom edge */
+.blk-ii::before { top: -2.7rem; bottom: 2.2rem; left: -7vw; right: -9rem; }
+/* III: photo starts above the block and overhangs its top edge */
+.blk-iii { margin-top: -3.5rem; }
+.blk-iii::before { top: 3.5rem; bottom: -2.7rem; left: -2rem; right: -7vw; }
+.sp-poster { position: relative; z-index: 2; margin-top: -2.2rem; }
+@media (max-width: 768px) {
+  .blk-i { padding-bottom: 0; }
+  .blk-iii { margin-top: 0; }
+  .has-block::before { display: none; }
+  .row-ii, .row-iii { padding-top: 2.5rem; }
+  .sp-poster { margin-top: 0; }
+}
+
+
+/* ===== School section I: cream block at the top-right, video straddles its left edge ===== */
+.s1-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; padding: 0 7%; }
+.s1-grid::before { content: ""; position: absolute; z-index: 0; top: 0; right: 0; width: 46%; bottom: 3.5rem; background: var(--tint); }
+.s1-h { grid-column: 1; grid-row: 1; position: relative; z-index: 1; padding: 2.5rem 0 1rem; }
+.s1-text { grid-column: 1; grid-row: 2; position: relative; z-index: 1; padding-bottom: 2.5rem; }
+.s1-video { grid-column: 2; grid-row: 1 / span 2; align-self: start; margin-top: 2.5rem; position: relative; z-index: 1; }
+/* text always paints above any cream block */
+.above { position: relative; z-index: 2; }
+@media (max-width: 768px) {
+  .s1-grid { grid-template-columns: 1fr; }
+  .s1-grid::before { display: none; }
+  .s1-h, .s1-text, .s1-video { grid-column: 1; }
+  .s1-h { grid-row: 1; } .s1-video { grid-row: 2; margin-top: 0; } .s1-text { grid-row: 3; padding-top: 1.5rem; }
+}
+
+
+/* ===== School section I (final): block tied to the video, poster overlaps its bottom edge ===== */
+.s1-grid { align-items: start; }
+.s1-grid::before { display: none; }
+.s1-l, .s1-r { position: relative; min-width: 0; }
+.s1h { padding: 2.5rem 0 1rem; }
+.s1-v { position: relative; isolation: isolate; margin-top: 2.5rem; }
+.s1-v::before { content: ""; position: absolute; z-index: -1; background: var(--tint); top: -2.5rem; bottom: -3.5rem; left: 3rem; right: -7vw; }
+.s1-p { position: relative; z-index: 2; display: flex; align-items: flex-end; gap: 1rem; margin-top: 1.3rem; padding-left: 4rem; }
+.s1-p .poster { width: min(240px, 48%); }
+.s1-p .note { width: min(220px, 42%); font-size: .8rem; margin: 0; }
+@media (max-width: 768px) {
+  .s1-v { margin-top: 0; } .s1-v::before { display: none; }
+  .s1-p { padding-left: 0; margin-top: 1.5rem; flex-wrap: wrap; }
+}
+
+
+/* ===== Pedagogical: photos straddle the edges of the cream bands (not centred) ===== */
+.ped .sp-row { align-items: center; padding-top: 2rem; padding-bottom: 2.5rem; }
+.ped-photo { position: relative; z-index: 2; align-self: start; }
+.ped-lap { margin-bottom: -4.2rem; }      /* photo hangs into the band below it */
+.ped-hang { margin-bottom: -4.7rem; }     /* photo hangs out of the bottom of its band */
+#ped-3, #ped-5 { padding-top: 3.8rem; }
+@media (max-width: 768px) {
+  .ped-lap, .ped-hang { margin-bottom: 0; }
+  #ped-3, #ped-5 { padding-top: 2rem; }
+}
