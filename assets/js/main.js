@@ -12,6 +12,6 @@
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.2 });
   items.forEach(function (el) { io.observe(el); });
 })();

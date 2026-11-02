@@ -1,14 +1,16 @@
 /* ===== Theme (change colours here only) ===== */
 :root {
-  --bg: #0a0a0a;
-  --text: #e9e4d6;
-  --cream: #fff4cf;
-  --muted: #a39b84;
+  --bg: #ffffff;
+  --text: #222222;
+  --head: #111111;
+  --cream: #fff4cf;            /* light text used on dark photos/banners */
+  --muted: #6f6a5d;
   --accent: #d4a62a;
-  --accent-dark: #b8901f;
-  --accent-soft: #f0c75e;
-  --card: #141414;
-  --line: #2e2813;
+  --accent-dark: #a97f0f;
+  --accent-soft: #e0b440;
+  --card: #ffffff;
+  --line: #e9e1cf;
+  --tint: #fdf3df;             /* cream blocks */
 }
 
 body {
@@ -22,9 +24,9 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 
 /* ===== Navbar ===== */
 .site-nav { background: var(--card); border-bottom: 1px solid rgba(212,166,42,.4); }
-.site-nav .navbar-brand { color: var(--cream); font-weight: 600; }
+.site-nav .navbar-brand { color: var(--head); font-weight: 600; }
 .site-nav .nav-link { color: var(--text); }
-.site-nav .nav-link.active, .site-nav .nav-link:hover { color: var(--accent-soft); font-weight: 600; }
+.site-nav .nav-link.active, .site-nav .nav-link:hover { color: var(--accent-dark); font-weight: 600; }
 
 /* ===== Cover ===== */
 .cover {
@@ -37,28 +39,28 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .cover-title { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -.04em; line-height: .92; color: var(--cream); margin: 0 0 1.2vw; }
 .cover-title .t1 { display: block; font-size: 7vw; }
 .cover-title .t2 { display: block; font-size: 4.6vw; }
-.cover-dates { max-width: 62%; color: var(--text); font-size: clamp(.8rem, 1.25vw, 1.2rem); line-height: 1.6; margin: 0; }
+.cover-dates { max-width: 62%; color: #f3eee2; font-size: clamp(.8rem, 1.25vw, 1.2rem); line-height: 1.6; margin: 0; }
 
 .btn-accent { background: var(--accent); color: #111; border: 0; }
 .btn-accent:hover { background: var(--accent-dark); color: #111; }
 
 /* ===== Dropdown ===== */
 .dropdown-menu { background: var(--card); border-color: var(--line); }
-.dropdown-item:hover { background: var(--bg); color: var(--accent-soft); }
+.dropdown-item:hover { background: var(--tint); color: var(--accent-dark); }
 
 /* ===== Photo placeholders (label shows until the image file exists) ===== */
-.photo { position: relative; overflow: hidden; border-radius: 6px; background: #2a2a2a; }
+.photo { position: relative; overflow: hidden; border-radius: 6px; background: #e6dfd0; }
 .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .ph-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--muted); font-size: .9rem; }
 .ph-tall, .ph-card { aspect-ratio: 4 / 5; }
 
 /* ===== Intro (Mabuhay) ===== */
-.intro { position: relative; z-index: 2; background: #0a0a0a; padding: 3rem 7%; }
+.intro { position: relative; z-index: 2; background: var(--bg); padding: 3rem 7%; }
 .intro-inner { display: grid; grid-template-columns: minmax(240px, 360px) 1fr; gap: 3rem; align-items: center; }
 .intro-photo { position: relative; z-index: 3; margin: -4.5rem 0; }
 .intro-photo .ph-tall { aspect-ratio: 3 / 4; }
 .intro-text { justify-self: end; text-align: right; max-width: 620px; }
-.intro-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-size: clamp(3rem, 8vw, 5.5rem); color: var(--cream); margin-bottom: 1.5rem; }
+.intro-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.04em; line-height: 1; font-size: clamp(3rem, 8vw, 5.5rem); color: var(--head); margin-bottom: 1.5rem; }
 .intro-text p { font-size: 1rem; color: var(--text); }
 
 /* ===== Welcome + category cards ===== */
@@ -66,7 +68,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .welcome::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.15); }
 .welcome-inner { position: relative; }
 .section-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.035em; line-height: 1.05; font-size: clamp(2rem, 4.6vw, 3.2rem); color: var(--cream); max-width: 900px; }
-.welcome-head p { margin: .8rem 0 0; color: var(--text); }
+.welcome-head p { margin: .8rem 0 0; color: var(--cream); }
 .welcome-head { text-shadow: 0 2px 14px rgba(0,0,0,.65); }
 
 .bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
@@ -131,7 +133,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .chip:hover { background: var(--accent); border-color: var(--accent); color: #111; }
 .page-main { max-width: 900px; margin: 0 auto; padding: 2.5rem 7% 3rem; }
 .sub, .video-wrap { margin-bottom: 3rem; scroll-margin-top: 1rem; }
-.sub-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: 1.7rem; color: var(--cream); margin-bottom: .8rem; }
+.sub-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: 1.7rem; color: var(--head); margin-bottom: .8rem; }
 .ph-wide { aspect-ratio: 4 / 3; }
 .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -152,7 +154,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .photo.fit { aspect-ratio: auto; background: transparent; }
 .photo.fit img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
 .photo.fit .ph-label { display: none; }
-.photo.fit.empty { background: #2a2a2a; }
+.photo.fit.empty { background: #e6dfd0; }
 .photo.fit.empty .ph-label { display: flex; }
 .photo.fit.empty.ph-sq { aspect-ratio: 1 / 1; }
 .photo.fit.empty.ph-wide { aspect-ratio: 4 / 3; }
@@ -171,3 +173,61 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .sub-title { margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid rgba(212,166,42,.35); }
 .page-main p, .page-main blockquote { text-align: justify; hyphens: auto; }
 @media (max-width: 576px) { .wrap-photo { float: none; width: 100%; margin: 0 0 1rem; } }
+
+
+/* ===== Header: categories in one line ===== */
+.cat-line { flex-wrap: wrap; align-items: center; gap: .1rem .15rem; font-size: .88rem; justify-content: flex-end; }
+.cat-line .nav-link { padding: .35rem .5rem; }
+.cat-line .sep { color: var(--accent); opacity: .55; }
+
+/* ===== Category page (design like the reference) ===== */
+.cat-banner { padding: 4rem 7% 2.5rem; min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end;
+  background: linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.4)), #1a1507 url("../img/school-hero.png") center / cover no-repeat; }
+.banner-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; font-size: clamp(1.9rem, 4.4vw, 3.2rem); color: var(--cream); max-width: 780px; margin: .4rem 0 .6rem; }
+.banner-sub { color: var(--accent-soft); font-size: 1.05rem; margin: 0; }
+
+.sp { padding-bottom: 3rem; }
+.sp p, .sp blockquote { text-align: justify; hyphens: auto; font-size: .95rem; line-height: 1.75; }
+.sp-h { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--head); padding: 2.5rem 7% 1rem; margin: 0; }
+.sp-h .num { color: var(--head); font-size: 1.25em; margin-right: .25rem; }
+.sp-h.right { text-align: right; padding: 0 0 1rem; }
+.sp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding: 2.5rem 7%; }
+.band-r { background: linear-gradient(90deg, transparent 0 46%, var(--tint) 46% 100%); }
+.band-l { background: linear-gradient(90deg, var(--tint) 0 54%, transparent 54% 100%); }
+.band-full { background: var(--tint); }
+.sp-poster { display: flex; justify-content: flex-end; align-items: flex-end; gap: 1rem; padding: 1rem 7% 2rem; }
+.sp-poster .poster { width: min(260px, 45%); }
+.sp-poster .note { width: min(230px, 45%); font-size: .8rem; margin: 0; }
+.sp-center { max-width: 920px; margin: 0 auto; padding: 0 7% 2rem; box-sizing: content-box; }
+.sp-pair { display: flex; gap: 1.2rem; align-items: flex-start; }
+.sp-pair > .photo { flex: 1 1 0; min-width: 0; }
+.sp-pair.center { max-width: 820px; margin: 0 auto; padding: 2.5rem 7%; box-sizing: content-box; }
+.sp .photo.fit { box-shadow: 0 8px 22px rgba(0,0,0,.55); border-radius: 4px; }
+.sp .video-frame { box-shadow: 0 8px 22px rgba(0,0,0,.55); border-radius: 4px; }
+.sp-pager { padding: 2rem 7% 0; margin: 0; }
+@media (max-width: 768px) {
+  .sp-row { grid-template-columns: 1fr; gap: 1.5rem; background: none; }
+  .band-full { background: var(--tint); }
+  .sp-h.right { text-align: left; }
+  .sp-poster { justify-content: center; flex-wrap: wrap; }
+  .sp-pair.center { padding: 1.5rem 7%; }
+}
+
+
+/* ===== Pedagogical Contents page ===== */
+.ped-hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; padding: 2rem 7% 0; align-items: stretch; }
+.ped-intro { display: flex; flex-direction: column; justify-content: space-between; gap: 3rem; padding: 2.5rem; min-height: 460px;
+  background: linear-gradient(rgba(253,243,223,.9), rgba(253,243,223,.9)), #e9dfc9 url("../img/ped-bg.png") center / cover no-repeat; }
+.ped-h1 { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -.03em; line-height: 1; font-size: clamp(1.9rem, 4.2vw, 3rem); color: var(--head); margin: 0 0 .5rem; }
+.ped-sub { font-size: 1.05rem; color: var(--text); margin: 0; }
+.ped-about { font-family: "Inter", sans-serif; font-weight: 800; text-transform: uppercase; font-size: 1.25rem; color: var(--head); margin: 0 0 .6rem; }
+.ped-intro p { font-size: .9rem; line-height: 1.7; text-align: justify; hyphens: auto; margin: 0; }
+.ped-mentor .photo.fit { box-shadow: none; border-radius: 0; }
+.ped-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.ped-n { font-family: "Inter", sans-serif; font-weight: 800; font-size: 3.2rem; line-height: 1; color: var(--head); }
+.ped-title { font-family: "Inter", sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; font-size: clamp(1.4rem, 2.6vw, 1.9rem); color: var(--head); margin: 0; padding-bottom: .6rem; border-bottom: 2px solid var(--head); }
+.ped-photo { max-width: 340px; width: 100%; margin: 0 auto; }
+@media (max-width: 768px) {
+  .ped-hero { grid-template-columns: 1fr; padding-top: 1rem; }
+  .ped-intro { padding: 1.5rem; min-height: 0; }
+}
