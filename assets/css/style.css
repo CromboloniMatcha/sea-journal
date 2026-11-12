@@ -386,14 +386,13 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .id-hero-img { display: block; width: 100%; height: auto; }          /* natural size: never cropped */
 .id-hero::before { content: ""; position: absolute; inset: 0; z-index: 2; background: rgba(0,0,0,.22); transition: opacity .5s; }   /* the shade */
 .id-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; z-index: 2; background: linear-gradient(to bottom, rgba(253,243,223,0), var(--tint)); transition: opacity .5s; }
-.id-title { position: absolute; left: 0; top: 0; width: 100%; height: auto; z-index: 3; pointer-events: none; transition: opacity .4s; }
 .id-play { position: absolute; left: 50%; top: 60%; z-index: 4; transform: translate(-50%, -50%); width: max(54px, 6.9vw); height: max(38px, 4.8vw); border: 0; border-radius: 14px; background: #f00; color: #fff; display: flex; align-items: center; justify-content: center; font-size: max(1.9rem, 3.2vw); box-shadow: 0 4px 14px rgba(0,0,0,.35); cursor: pointer; transition: transform .2s, background .2s, opacity .4s; }
 .id-play:hover { background: #d90000; transform: translate(-50%, -50%) scale(1.07); }
 .id-player { position: absolute; inset: 0; z-index: 5; background: #000; display: none; }
 .id-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-/* playing: shade, fade, title and button disappear */
+/* playing: shade, fade and button disappear */
 .id-hero.is-playing::before, .id-hero.is-playing::after { opacity: 0; }
-.id-hero.is-playing .id-title, .id-hero.is-playing .id-play { opacity: 0; visibility: hidden; }
+.id-hero.is-playing .id-play { opacity: 0; visibility: hidden; }
 .id-hero.is-playing .id-player { display: block; }
 
 .id-intro, .id-places { font-family: "Poppins", "Inter", sans-serif; }
