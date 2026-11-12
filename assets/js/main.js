@@ -12,7 +12,7 @@
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.0 });
   items.forEach(function (el) { io.observe(el); });
 })();
 // Discover Indonesia: hero video plays on click; the shade, title and button disappear
