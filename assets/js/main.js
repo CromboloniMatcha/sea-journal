@@ -27,3 +27,22 @@
     hero.classList.add('is-playing');
   });
 })();
+
+// Mobile header: add a menu button to the navbar (shown by CSS on phones only)
+(function () {
+  var nav = document.querySelector('.site-nav');
+  var list = nav && nav.querySelector('.cat-line');
+  if (!list) return;
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'nav-toggle';
+  btn.setAttribute('aria-label', 'Toggle menu');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<i class="bi bi-list"></i>';
+  list.parentNode.insertBefore(btn, list);
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+  });
+})();
