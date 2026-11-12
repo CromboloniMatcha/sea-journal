@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>4. Discover Indonesia · SEA Teacher Journal</title>
+  <title>Discover Indonesia · SEA Teacher Journal</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&family=Lora:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -18,66 +18,90 @@
       <ul class="navbar-nav ms-auto cat-line">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="sep" aria-hidden="true">|</li>
-        <li class="nav-item"><a class="nav-link" href="school.html">1. School</a></li>
+        <li class="nav-item"><a class="nav-link" href="school.html">School</a></li>
         <li class="sep" aria-hidden="true">|</li>
-        <li class="nav-item"><a class="nav-link" href="pedagogical.html">2. Pedagogical Contents</a></li>
+        <li class="nav-item"><a class="nav-link" href="pedagogical.html">Pedagogical Contents</a></li>
         <li class="sep" aria-hidden="true">|</li>
-        <li class="nav-item"><a class="nav-link" href="teaching.html">3. Teaching Practice Experiences</a></li>
+        <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching Practice Experiences</a></li>
         <li class="sep" aria-hidden="true">|</li>
-        <li class="nav-item"><a class="nav-link active" href="indonesia.html">4. Discover Indonesia</a></li>
+        <li class="nav-item"><a class="nav-link active" href="indonesia.html">Discover Indonesia</a></li>
         <li class="sep" aria-hidden="true">|</li>
-        <li class="nav-item"><a class="nav-link" href="reflection.html">5. Reflections</a></li>
+        <li class="nav-item"><a class="nav-link" href="reflection.html">Reflections</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="page-hero">
-    <div class="page-hero-inner">
-      <span class="b-tag">Category · 02</span>
-      <h1 class="page-title">4. Discover Indonesia</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-      <div class="chips"><a class="chip" href="#smg-1">Sub Category 2.1</a><a class="chip" href="#smg-2">Sub Category 2.2</a><a class="chip" href="#smg-3">Sub Category 2.3</a></div>
-    </div>
+  <!-- Hero video: shaded until played. Replace YOUTUBE_VIDEO_ID_INDONESIA with the ID after v= -->
+  <header class="id-hero" data-video="https://www.youtube.com/embed/OsGx4jiQiT4">
+    <img class="id-hero-img" src="assets/img/indonesia-hero.png" alt="Borobudur temple stupas" onerror="this.style.display='none'">
+    <svg class="id-title" viewBox="0 0 1366 330" role="img" aria-label="Indonesia" focusable="false">
+      <defs>
+        <linearGradient id="idGrad" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#f20000"/>
+          <stop offset=".4" stop-color="#f20000"/>
+          <stop offset=".52" stop-color="#ff5c5c"/>
+          <stop offset=".66" stop-color="#ffc9c9"/>
+          <stop offset=".76" stop-color="#ffffff"/>
+          <stop offset="1" stop-color="#ffffff"/>
+        </linearGradient>
+        <filter id="idShadow" x="-5%" y="-5%" width="112%" height="125%">
+          <feDropShadow dx="7" dy="7" stdDeviation="5" flood-color="#000" flood-opacity=".35"/>
+        </filter>
+      </defs>
+      <text x="100" y="300" textLength="1146" lengthAdjust="spacingAndGlyphs" font-family="Anton, Impact, sans-serif" font-size="350" fill="url(#idGrad)" filter="url(#idShadow)">INDONESIA</text>
+    </svg>
+    <button class="id-play" type="button" aria-label="Play video"><i class="bi bi-play-fill"></i></button>
+    <div class="id-player"></div>
   </header>
 
-  <main class="page-main">
-    <section class="video-wrap reveal">
-      <h2 class="sub-title">Watch the video</h2>
-      <div class="video-frame">
-        <!-- Replace YOUTUBE_VIDEO_ID with your video's ID (the part after v= in the YouTube link) -->
-        <iframe src="https://www.youtube-nocookie.com/embed/YOUTUBE_VIDEO_ID" title="4. Discover Indonesia video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  <main>
+    <section class="id-intro">
+      <div class="id-intro-l reveal">
+        <h1 class="id-h1">Discover<br>Indonesia</h1>
+        <p class="id-sub">Culture, Heritage, and Local Experiences</p>
+        <a class="id-btn" href="#places">Explore the Journey</a>
+      </div>
+      <div class="id-intro-r reveal d1">
+        <p>Indonesia became more than just the country where I completed my teaching practicum. Through every journey, I gained new experiences, meaningful friendships, and a deeper appreciation for its culture, beauty, and people. The places featured in this section are some of the destinations that made my SEA-Teacher experience truly unforgettable.</p>
       </div>
     </section>
 
-    <section class="sub reveal" id="smg-1">
-      <h2 class="sub-title">Sub Category 2.1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-      <div class="row g-3">
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-1-a.png" alt="" onerror="this.style.display='none'"></div></div>
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-1-b.png" alt="" onerror="this.style.display='none'"></div></div>
+    <section class="id-places" id="places">
+      <div class="id-places-head reveal">
+        <h2 class="id-h2">The Places That Made Indonesia Feel Like Home</h2>
+        <span class="id-pill">Journey Highlights</span>
       </div>
-    </section>
-    <section class="sub reveal" id="smg-2">
-      <h2 class="sub-title">Sub Category 2.2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-      <div class="row g-3">
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-2-a.png" alt="" onerror="this.style.display='none'"></div></div>
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-2-b.png" alt="" onerror="this.style.display='none'"></div></div>
-      </div>
-    </section>
-    <section class="sub reveal" id="smg-3">
-      <h2 class="sub-title">Sub Category 2.3</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-      <div class="row g-3">
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-3-a.png" alt="" onerror="this.style.display='none'"></div></div>
-        <div class="col-6"><div class="photo ph-wide"><span class="ph-label">Photo</span><img src="assets/img/smg-3-b.png" alt="" onerror="this.style.display='none'"></div></div>
-      </div>
-    </section>
 
-    <nav class="cat-pager">
-      <a href="index.html"><i class="bi bi-arrow-left"></i> Home</a>
-      <a href="reflection.html">5. Reflections <i class="bi bi-arrow-right"></i></a>
-    </nav>
+      <div class="id-cards">
+        <a href="indonesia-semarang.html" class="id-card reveal">
+          <img class="id-card-img" src="assets/img/indonesia-semarang.png" alt="" onerror="this.style.display='none'">
+          <div class="id-glass"></div>
+          <div class="id-card-body">
+            <h3 class="id-card-title">Semarang</h3>
+            <p class="id-card-text">The First Chapter of My Indonesian Journey</p>
+            <span class="id-card-btn">Explore the Journey</span>
+          </div>
+        </a>
+        <a href="indonesia-celosia.html" class="id-card reveal d1">
+          <img class="id-card-img" src="assets/img/indonesia-celosia.png" alt="" onerror="this.style.display='none'">
+          <div class="id-glass"></div>
+          <div class="id-card-body">
+            <h3 class="id-card-title">Celosia</h3>
+            <p class="id-card-text">The Most Magical Place I Visited in Indonesia</p>
+            <span class="id-card-btn">Explore the Journey</span>
+          </div>
+        </a>
+        <a href="indonesia-yogyakarta.html" class="id-card reveal d2">
+          <img class="id-card-img" src="assets/img/indonesia-yogyakarta.png" alt="" onerror="this.style.display='none'">
+          <div class="id-glass"></div>
+          <div class="id-card-body">
+            <h3 class="id-card-title">Yogyakarta</h3>
+            <p class="id-card-text">A Journey Through History, Culture, and Hidden Beauty</p>
+            <span class="id-card-btn">Explore the Journey</span>
+          </div>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer text-center">
