@@ -533,6 +533,107 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 }
 
 
+/* ===== Discover Indonesia page ===== */
+.id-hero { position: relative; background: #1b2a3a; min-height: 40vw; overflow: hidden; }
+.id-hero-img { display: block; width: 100%; height: auto; }          /* natural size: never cropped */
+.id-hero::before { content: ""; position: absolute; inset: 0; z-index: 2; background: rgba(0,0,0,.22); transition: opacity .5s; }   /* the shade */
+.id-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; z-index: 2; background: linear-gradient(to bottom, rgba(253,243,223,0), var(--tint)); transition: opacity .5s; }
+.id-play { position: absolute; left: 50%; top: 60%; z-index: 4; transform: translate(-50%, -50%); width: max(54px, 6.9vw); height: max(38px, 4.8vw); border: 0; border-radius: 14px; background: #f00; color: #fff; display: flex; align-items: center; justify-content: center; font-size: max(1.9rem, 3.2vw); box-shadow: 0 4px 14px rgba(0,0,0,.35); cursor: pointer; transition: transform .2s, background .2s, opacity .4s; }
+.id-play:hover { background: #d90000; transform: translate(-50%, -50%) scale(1.07); }
+.id-player { position: absolute; inset: 0; z-index: 5; background: #000; display: none; }
+.id-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* playing: shade, fade and button disappear */
+.id-hero.is-playing::before, .id-hero.is-playing::after { opacity: 0; }
+.id-hero.is-playing .id-play { opacity: 0; visibility: hidden; }
+.id-hero.is-playing .id-player { display: block; }
+
+.id-intro, .id-places { font-family: "Poppins", "Inter", sans-serif; }
+.id-intro { display: grid; grid-template-columns: 52% 1fr; gap: 2rem; padding: 3rem 6% 4rem; background: var(--tint); border-radius: 0 0 18px 18px; box-shadow: 0 12px 20px rgba(0,0,0,.16); }
+.id-h1 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(3rem, 6.1vw, 6rem); line-height: .86; letter-spacing: -.02em; margin: 0 0 1.2rem; background: linear-gradient(90deg, #a02c2c, #e00000); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.id-sub { font-size: clamp(1.05rem, 1.75vw, 1.6rem); color: #111; margin: 0; line-height: 1.3; }
+.id-btn { display: inline-block; margin-top: 2.4rem; padding: .85rem 1.7rem; border-radius: 14px; background: linear-gradient(180deg, #f3e3b0, #e8cf8a); color: #111; font-size: clamp(1rem, 1.6vw, 1.3rem); text-decoration: none; box-shadow: 0 6px 14px rgba(0,0,0,.22); transition: transform .2s; }
+.id-btn:hover { transform: translateY(-2px); color: #111; }
+.id-intro-r { padding-top: 3.4rem; }
+.id-intro-r p { font-size: clamp(.85rem, 1.15vw, 1rem); line-height: 1.5; text-align: justify; hyphens: auto; max-width: 540px; margin: 0; color: #111; }
+
+.id-places { padding: 5.5rem 4.8% 5rem; }
+.id-places-head { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding: 0 1.7%; margin-bottom: 2.8rem; }
+.id-h2 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.6rem, 2.7vw, 2.4rem); line-height: 1.12; letter-spacing: -.01em; color: #000; max-width: 640px; margin: 0; }
+.id-pill { padding: .5rem 1.2rem; border: 3px solid #111; border-radius: 999px; background: #fff; font-size: clamp(.95rem, 1.5vw, 1.2rem); color: #111; box-shadow: 0 6px 14px rgba(0,0,0,.14); }
+.id-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.9%; }
+.id-card { position: relative; display: block; aspect-ratio: 395 / 487; border-radius: 28px; overflow: hidden; color: #fff; text-decoration: none; background: linear-gradient(135deg, #3a3020, #1e1e22); box-shadow: 0 10px 22px rgba(0,0,0,.28); }
+.id-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.id-card:hover .id-card-img { transform: scale(1.05); }
+.id-glass { position: absolute; left: 0; right: 0; bottom: 0; height: 46%; z-index: 1; background: rgba(30,22,12,.45); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 24%); mask-image: linear-gradient(to bottom, transparent 0, #000 24%); }
+.id-card-body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 0 7% 1.3rem; display: flex; flex-direction: column; align-items: center; }
+.id-card-title { width: 100%; font-family: "Poppins", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.3rem, 2.4vw, 2.1rem); line-height: 1.1; margin: 0; padding-bottom: .4rem; border-bottom: 1px solid rgba(255,255,255,.85); }
+.id-card-text { width: 100%; font-size: clamp(.78rem, 1.2vw, 1rem); line-height: 1.2; margin: .55rem 0 1.1rem; color: #fff; }
+.id-card-btn { background: #fff; color: #111; border-radius: 999px; padding: .35rem 1.2rem; font-size: clamp(.75rem, 1.15vw, .95rem); transition: transform .2s; }
+.id-card:hover .id-card-btn { transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .id-intro { grid-template-columns: 1fr; padding: 2rem 7% 3rem; }
+  .id-intro-r { padding-top: 0; }
+  .id-places { padding: 3.5rem 6% 3.5rem; }
+  .id-places-head { padding: 0; }
+  .id-cards { grid-template-columns: 1fr; gap: 1.5rem; }
+  .id-card-title { font-size: 1.6rem; }
+  .id-card-text { font-size: .95rem; }
+  .id-card-btn { font-size: .9rem; }
+}
+
+/* ===== Discover Indonesia page ===== */
+.id-hero { position: relative; background: #1b2a3a; min-height: 40vw; overflow: hidden; }
+.id-hero-img { display: block; width: 100%; height: auto; }          /* natural size: never cropped */
+.id-hero::before { content: ""; position: absolute; inset: 0; z-index: 2; background: rgba(0,0,0,.22); transition: opacity .5s; }   /* the shade */
+.id-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; z-index: 2; background: linear-gradient(to bottom, rgba(253,243,223,0), var(--tint)); transition: opacity .5s; }
+.id-play { position: absolute; left: 50%; top: 60%; z-index: 4; transform: translate(-50%, -50%); width: max(54px, 6.9vw); height: max(38px, 4.8vw); border: 0; border-radius: 14px; background: #f00; color: #fff; display: flex; align-items: center; justify-content: center; font-size: max(1.9rem, 3.2vw); box-shadow: 0 4px 14px rgba(0,0,0,.35); cursor: pointer; transition: transform .2s, background .2s, opacity .4s; }
+.id-play:hover { background: #d90000; transform: translate(-50%, -50%) scale(1.07); }
+.id-player { position: absolute; inset: 0; z-index: 5; background: #000; display: none; }
+.id-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* playing: shade, fade and button disappear */
+.id-hero.is-playing::before, .id-hero.is-playing::after { opacity: 0; }
+.id-hero.is-playing .id-play { opacity: 0; visibility: hidden; }
+.id-hero.is-playing .id-player { display: block; }
+
+.id-intro, .id-places { font-family: "Poppins", "Inter", sans-serif; }
+.id-intro { display: grid; grid-template-columns: 52% 1fr; gap: 2rem; padding: 3rem 6% 4rem; background: var(--tint); border-radius: 0 0 18px 18px; box-shadow: 0 12px 20px rgba(0,0,0,.16); }
+.id-h1 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(3rem, 6.1vw, 6rem); line-height: .86; letter-spacing: -.02em; margin: 0 0 1.2rem; background: linear-gradient(90deg, #a02c2c, #e00000); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.id-sub { font-size: clamp(1.05rem, 1.75vw, 1.6rem); color: #111; margin: 0; line-height: 1.3; }
+.id-btn { display: inline-block; margin-top: 2.4rem; padding: .85rem 1.7rem; border-radius: 14px; background: linear-gradient(180deg, #f3e3b0, #e8cf8a); color: #111; font-size: clamp(1rem, 1.6vw, 1.3rem); text-decoration: none; box-shadow: 0 6px 14px rgba(0,0,0,.22); transition: transform .2s; }
+.id-btn:hover { transform: translateY(-2px); color: #111; }
+.id-intro-r { padding-top: 3.4rem; }
+.id-intro-r p { font-size: clamp(.85rem, 1.15vw, 1rem); line-height: 1.5; text-align: justify; hyphens: auto; max-width: 540px; margin: 0; color: #111; }
+
+.id-places { padding: 5.5rem 4.8% 5rem; }
+.id-places-head { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding: 0 1.7%; margin-bottom: 2.8rem; }
+.id-h2 { font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.6rem, 2.7vw, 2.4rem); line-height: 1.12; letter-spacing: -.01em; color: #000; max-width: 640px; margin: 0; }
+.id-pill { padding: .5rem 1.2rem; border: 3px solid #111; border-radius: 999px; background: #fff; font-size: clamp(.95rem, 1.5vw, 1.2rem); color: #111; box-shadow: 0 6px 14px rgba(0,0,0,.14); }
+.id-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.9%; }
+.id-card { position: relative; display: block; aspect-ratio: 395 / 487; border-radius: 28px; overflow: hidden; color: #fff; text-decoration: none; background: linear-gradient(135deg, #3a3020, #1e1e22); box-shadow: 0 10px 22px rgba(0,0,0,.28); }
+.id-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.id-card:hover .id-card-img { transform: scale(1.05); }
+.id-glass { position: absolute; left: 0; right: 0; bottom: 0; height: 46%; z-index: 1; background: rgba(30,22,12,.45); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 24%); mask-image: linear-gradient(to bottom, transparent 0, #000 24%); }
+.id-card-body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 0 7% 1.3rem; display: flex; flex-direction: column; align-items: center; }
+.id-card-title { width: 100%; font-family: "Poppins", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.3rem, 2.4vw, 2.1rem); line-height: 1.1; margin: 0; padding-bottom: .4rem; border-bottom: 1px solid rgba(255,255,255,.85); }
+.id-card-text { width: 100%; font-size: clamp(.78rem, 1.2vw, 1rem); line-height: 1.2; margin: .55rem 0 1.1rem; color: #fff; }
+.id-card-btn { background: #fff; color: #111; border-radius: 999px; padding: .35rem 1.2rem; font-size: clamp(.75rem, 1.15vw, .95rem); transition: transform .2s; }
+.id-card:hover .id-card-btn { transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .id-intro { grid-template-columns: 1fr; padding: 2rem 7% 3rem; }
+  .id-intro-r { padding-top: 0; }
+  .id-places { padding: 3.5rem 6% 3.5rem; }
+  .id-places-head { padding: 0; }
+  .id-cards { grid-template-columns: 1fr; gap: 1.5rem; }
+  .id-card-title { font-size: 1.6rem; }
+  .id-card-text { font-size: .95rem; }
+  .id-card-btn { font-size: .9rem; }
+}
+
+
 /* ===== Discover Indonesia: Semarang page ===== */
 .sm { font-family: "Poppins", "Inter", sans-serif; color: #111; padding-bottom: 4rem; }
 .sm p { font-size: clamp(.78rem, 1.08vw, .95rem); line-height: 1.55; text-align: justify; hyphens: auto; margin: 0 0 1rem; color: #111; }
@@ -541,7 +642,7 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 .sm-hero-text { position: absolute; left: 3.6%; top: 2.2%; line-height: 1; font-family: "Poppins", sans-serif; }
 .sm-h1 { display: flex; align-items: baseline; gap: .12em; margin: 0; font-family: "Poppins", sans-serif; font-weight: 700; line-height: 1; font-size: clamp(1.3rem, 3.9vw, 3.6rem); text-shadow: 0 0 10px rgba(255,255,255,.55); }
 .sm-h1 .n { color: #d0101a; font-size: 1.15em; }
-.sm-h1 .t { color: #2f2f2f; }
+.sm-h1 .t { color: #d0101a; }
 .sm-sub { margin: .05em 0 0 2.3vw; font-weight: 500; font-size: clamp(.75rem, 1.75vw, 1.4rem); color: #111; text-shadow: 0 0 8px rgba(255,255,255,.6); }
 
 .sm-h2 { display: inline-block; font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.1rem, 2.4vw, 2rem); line-height: 1.1; color: #b5121b; margin: 0 0 1.6rem; padding-bottom: .45rem; border-bottom: 3px solid #111; }
@@ -599,3 +700,32 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
 /* ===== Semarang title: yellow wash over the background photo ===== */
 .sm-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(255,236,160,.55) 0%, rgba(255,236,160,.35) 100%); }   /* change the .55 / .35 to make it stronger or lighter */
 .sm-hero-text { z-index: 2; }
+
+
+/* ===== Semarang page: buttons to the other places ===== */
+.sm-pager { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 3.5rem 6% 0; font-family: "Poppins", sans-serif; }
+.sm-back { color: #111; text-decoration: none; font-weight: 500; font-size: clamp(.9rem, 1.3vw, 1.1rem); }
+.sm-back:hover { color: #b5121b; }
+.sm-next { display: flex; flex-wrap: wrap; gap: .8rem; }
+.sm-pbtn { display: inline-block; padding: .7rem 1.4rem; border-radius: 14px; background: linear-gradient(180deg, #f3e3b0, #e8cf8a); color: #111; text-decoration: none; font-weight: 500; font-size: clamp(.9rem, 1.3vw, 1.1rem); box-shadow: 0 6px 14px rgba(0,0,0,.22); transition: transform .2s; }
+.sm-pbtn:hover { transform: translateY(-2px); color: #111; }
+
+
+/* ===== Semarang: photos 2 and 5 really overhang their cream bands (negative margin = band padding + overhang) ===== */
+@media (min-width: 769px) {
+  .sm-casa { padding: 3rem 0; align-items: start; }
+  .sm-casa .sm-txt { align-self: center; }
+  .sm-casa .sm-over { margin: -6.5rem 0; }              /* 3rem padding + 3.5rem overhang, top and bottom */
+  .sm-malls { padding: 2rem 0; align-items: start; }
+  .sm-malls .sm-txt { align-self: center; }
+  .sm-malls .sm-txt p { font-size: clamp(.62rem, .85vw, .85rem); }
+  .sm-malls .sm-over { margin: -4.7rem 0 -7rem; }       /* 2rem padding + 2.7rem overhang on top, 5rem on the bottom */
+}
+
+
+/* ===== Semarang: Casa photo keeps a gap under the gold box; Celosia button sits above Trip to Yogyakarta ===== */
+@media (min-width: 769px) {
+  .sm-casa { margin-top: 6.4rem; }     /* 3.5rem photo overhang + about 2.9rem clear space below the gold line */
+}
+.sm-next { flex-direction: column; align-items: stretch; }
+.sm-pbtn { text-align: center; }
