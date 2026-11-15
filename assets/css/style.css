@@ -797,3 +797,43 @@ h1, h2, h3, .navbar-brand { font-family: "Lora", Georgia, serif; }
   .cat-line .nav-link { padding: .75rem .4rem; border-top: 1px solid var(--line); }
   .cat-line .nav-link.active { background: var(--tint); }
 }
+
+/* ===== Discover Indonesia: Celosia page ===== */
+.ce { font-family: "Poppins", "Inter", sans-serif; color: #111; padding-bottom: 4rem; }
+.ce-hero { position: relative; overflow: hidden; background: #c9d1c6; min-height: 60vw; border-radius: 0 0 50% 50% / 0 0 8vw 8vw; }
+.ce-hero-img { display: block; width: 100%; height: auto; }          /* natural size: never cropped */
+.ce-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: rgba(238,242,246,.4); }   /* pale haze like the mockup; change .4 to adjust */
+.ce-hero-text { position: absolute; z-index: 2; left: 15.5%; top: 6.5%; width: 50%; }
+.ce-h1 { margin: 0; font-family: "Poppins", sans-serif; font-weight: 800; text-transform: uppercase; line-height: .9; letter-spacing: -.02em; font-size: clamp(2.2rem, 10vw, 11rem); background: linear-gradient(90deg, #a52a2a 0%, #e00000 45%, #b22222 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ce-sub { margin: .6vw 0 0 .6%; max-width: 28vw; font-weight: 500; font-size: clamp(.78rem, 1.85vw, 1.8rem); line-height: 1.3; color: #111; }
+
+/* collage 1 hangs over the hero's bottom edge */
+.ce-over { position: relative; z-index: 3; width: 85%; margin: -16vw auto 0; }
+.ce-over .photo.fit, .ce-wide .photo.fit { box-shadow: none; border-radius: 0; }
+
+/* cream block */
+.ce-block { margin: 3.2rem 2.9% 0; padding: 1.6rem 0 3.4rem; background: var(--tint); border-radius: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.2); }
+.ce-block-head { text-align: center; padding: 0 5%; }
+.ce-h2 { display: block; margin: 0; font-family: "Poppins", sans-serif; font-weight: 700; font-size: clamp(1.3rem, 4.5vw, 4.4rem); line-height: 1.15; letter-spacing: -.02em; color: #a52121; }
+.ce-line { width: 69%; margin: .5rem auto 1.3rem; border: 0; border-top: 3px solid #111; opacity: 1; }
+.ce-wide { width: 100%; }
+.ce-text { padding: 2.2rem 9.5% 0; }
+.ce-text p { font-size: clamp(.72rem, 1.1vw, .98rem); line-height: 1.6; text-align: justify; hyphens: auto; margin: 0 0 1.2rem; color: #111; }
+
+/* empty-photo placeholders keep each collage's shape */
+.photo.fit.empty.ph-ce1 { aspect-ratio: 919 / 737; }
+.photo.fit.empty.ph-ce2 { aspect-ratio: 1019 / 520; }
+
+@media (max-width: 768px) {
+  .ce-hero { min-height: 90vw; border-radius: 0 0 50% 50% / 0 0 10vw 10vw; }
+  .ce-hero-text { left: 7%; top: 6%; width: 70%; }
+  .ce-sub { max-width: 48vw; font-size: .8rem; }
+  .ce-over { width: 92%; margin-top: -12vw; }
+  .ce-block { margin: 2rem 3% 0; padding-bottom: 2rem; }
+  .ce-line { width: 80%; }
+  .ce-text { padding: 1.5rem 7% 0; }
+}
+
+
+/* ===== Celosia: collage 2 fades into the cream block at the top and bottom ===== */
+.ce-wide .photo.fit img { -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%); }   /* change 9% / 91% for a longer or shorter fade */
